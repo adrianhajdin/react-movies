@@ -79,8 +79,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/JavaScript-Mastery-Pro/moodflix.git
-cd moodflix
+git clone https://github.com/adrianhajdin/react-movies.git
+cd react-movies
 ```
 
 **Installation**

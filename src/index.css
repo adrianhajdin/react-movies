@@ -36,45 +36,22 @@
   }
 
   main {
-    @apply min-h-screen relative bg-primary;
-  }
-
-  header {
-    @apply sm:mt-10 mt-5;
+    @apply max-h-[50vh] relative bg-primary;
   }
 
   header img {
-    @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
+    @apply w-full max-w-lg sm:h-[30vh] md:h-[50vh] object-contain mx-auto drop-shadow-md;
   }
 }
 
 @layer components {
   .pattern {
-    @apply bg-hero-pattern w-screen h-screen bg-center bg-cover absolute z-0;
+    @apply bg-hero-pattern w-[100%] h-screen bg-center bg-cover absolute z-0;
+    @apply bg-hero-pattern w-[100%] h-screen bg-center bg-cover absolute z-0;
   }
 
   .wrapper {
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
-  }
-
-  .trending {
-    @apply mt-20;
-
-    & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
-    }
-
-    & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
-    }
-
-    & ul li p {
-      @apply fancy-text mt-[22px] text-nowrap;
-    }
-
-    & ul li img {
-      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
-    }
   }
 
   .search {
@@ -90,6 +67,26 @@
 
     & input {
       @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-gray-200 placeholder-light-200 outline-hidden;
+    }
+  }
+
+  .trending {
+    @apply mt-5;
+
+    & ul {
+      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
+    }
+
+    & ul li {
+      @apply min-w-[230px] flex flex-row items-center;
+    }
+
+    & ul li p {
+      @apply fancy-text mt-[22px] text-nowrap;
+    }
+
+    & ul li img {
+      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
     }
   }
 
@@ -158,5 +155,27 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a8b5db;
+  border-radius: 6px;
+  border: 3px solid #030014;
+}
+
+@media (min-height: 880px) and (min-width: 1270px) {
+  .trending ul {
+    overflow-x: hidden;
+  }
+}
+@media (max-height: 880px) and (min-width: 1270px) {
+  .trending ul {
+    overflow-x: hidden;
   }
 }
